@@ -1,0 +1,85 @@
+/* =========================
+   Navbar Global Styles
+========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #ffcc00, #0033cc);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.burger:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #0b0b0b;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    border-left: 3px solid #ffd700;
+    border-radius: 0 0 0 12px;
+    box-shadow: -3px 3px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s forwards;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
