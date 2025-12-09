@@ -185,3 +185,48 @@ nav a:hover {
     font-size: 1.5rem;
   }
 }
+
+/* =====================================================
+   TAMBAHAN BARU — STYLE "DAFTAR ISI"
+   (Tidak menyentuh atau mengubah style lain)
+===================================================== */
+
+#daftar-isi {
+  margin: 20px auto 10px;
+  padding: 15px 20px;
+  max-width: 600px;
+  background: #111;
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+#daftar-isi h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ffeb3b;
+}
+
+.daftar-isi-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.daftar-isi-list a {
+  padding: 8px 14px;
+  background: #222;
+  border: 1px solid #ffd700;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #ffd700;
+  transition: 0.3s;
+}
+
+.daftar-isi-list a:hover {
+  background: #ffd700;
+  color: #000;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
