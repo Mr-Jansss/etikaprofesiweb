@@ -46,12 +46,10 @@ function renderProducts(items) {
 
     productList.appendChild(card);
 
-    // Fade-in animation
+    // Optional: Fade-in animation
     card.style.animation = `fadeIn 0.5s ease forwards`;
     card.style.opacity = 0;
-    setTimeout(() => {
-      card.style.opacity = 1;
-    }, 100);
+    setTimeout(() => card.style.opacity = 1, 100);
   });
 }
 
@@ -60,8 +58,8 @@ function renderProducts(items) {
 // ============================
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
-  const filtered = products.filter(p =>
-    p.name.toLowerCase().includes(query)
-  );
+  const filtered = products.filter(p => p.name.toLowerCase().includes(query));
   renderProducts(filtered);
 });
+
+
