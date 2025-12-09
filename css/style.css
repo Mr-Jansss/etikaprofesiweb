@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0a0a0a; /* Hitam */
+  background: #0a0a0a;
   color: #fff;
 }
 
@@ -23,7 +23,7 @@ a {
 =========================== */
 header {
   background: linear-gradient(90deg, #111 0%, #1a1a1a 100%);
-  color: #ffd700; /* Gold */
+  color: #ffd700;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,13 +36,13 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  color: #ffd700; /* Gold */
+  color: #ffd700;
 }
 
 .burger {
   font-size: 2rem;
   cursor: pointer;
-  color: #ffeb3b; /* Kuning */
+  color: #ffeb3b;
   transition: transform 0.3s;
 }
 
@@ -56,21 +56,21 @@ nav {
   position: absolute;
   top: 60px;
   right: 20px;
-  background: #222; /* Dark overlay */
+  background: #222;
   padding: 10px 20px;
   border-radius: 8px;
   animation: fadeIn 0.3s ease-in-out;
 }
 
 nav a {
-  color: #00bfff; /* Biru */
+  color: #00bfff;
   margin: 8px 0;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffd700; /* Gold */
+  color: #ffd700;
 }
 
 /* ===========================
@@ -122,6 +122,7 @@ nav a:hover {
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
 }
 
 .product-card:hover {
@@ -144,7 +145,31 @@ nav a:hover {
   text-align: center;
   font-size: 1rem;
   padding: 10px;
-  color: #ffeb3b; /* Kuning */
+  color: #ffeb3b;
+}
+
+/* =====================================================
+   PITA "KLIK DI SINI"
+===================================================== */
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  width: 160px;
+  background: #ffd700;
+  color: #000;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.product-card:hover .ribbon {
+  background: #ffea00;
 }
 
 /* ===========================
@@ -188,7 +213,6 @@ nav a:hover {
 
 /* =====================================================
    TAMBAHAN BARU — STYLE "DAFTAR ISI"
-   (Tidak menyentuh atau mengubah style lain)
 ===================================================== */
 
 #daftar-isi {
